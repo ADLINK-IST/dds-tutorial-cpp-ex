@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
-set(CMAKE_MODULE_PATH ../cmake)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/../cmake)
 project (dds-tutorial)
 
 include (MacroOpenSplice)
@@ -17,7 +17,7 @@ include_directories(
 set (idls TempControl.idl)
 
 foreach(idl ${idls})
-	OpenSplice_IDLGEN (${idl})
+	OpenSplice_IDLGEN (${CMAKE_SOURCE_DIR}/${idl})
 	string (REGEX REPLACE "\(.*\).idl" "./gen/\\1.cpp" VARS_1 ${idl})
 	string (REGEX REPLACE "\(.*\).idl" "./gen/\\1.h" VARS_2 ${idl})
 	string (REGEX REPLACE "\(.*\).idl" "./gen/\\1Dcps.cpp" VARS_3 ${idl})
