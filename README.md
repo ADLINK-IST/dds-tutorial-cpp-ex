@@ -2,8 +2,8 @@
 
 Text can be found here:
 
-Link:   http://www.researchgate.net/publication/273136749_The_Data_Distribution_Service_Tutorial
-Source: https://github.com/PrismTech/dds-tutorial
+* Link:   http://www.researchgate.net/publication/273136749_The_Data_Distribution_Service_Tutorial
+* Source: https://github.com/PrismTech/dds-tutorial
 
 #Overview
 
@@ -20,7 +20,7 @@ this should not pose a problem.
 
 To try out the examples you need to have:
 
-  - OpenSplice DDS (http://opensplice.org | http://prismtech.com)
+  - OpenSplice DDS (https://github.com/PrismTech/opensplice | http://opensplice.org | http://prismtech.com)
   - g++ or clang with support for C+0x
   - cmake 2.8 or higher
 
@@ -113,9 +113,11 @@ make -f Makefile.Build_DCPS_ISO_Cpp_Lib
 ## Compiling
 To compile simply do:
 
-$ cmake .
-$ make
-
+```
+. opensplice/install/HDE/x86_64.linux-dev/custom_lib/release.com  ## source opensplice
+cmake .
+make -j2 -l2
+```
 
 That's it.
 
